@@ -1,0 +1,162 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: burlywood;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #ff5733;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Ensure the images and text are spaced out */
+    align-items: center; /* Center the content vertically */
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.header-content {
+    flex: 1; /* Allow the content to take up available space */
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+/* Sections */
+section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #ff5733;
+    color: white;
+}
+
+/* Pizza Gallery */
+.pizza-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pizza-item {
+    text-align: center;
+    flex-basis: 250px; /* Ensures that each pizza item takes a reasonable space */
+}
+
+.pizza-item img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ff5733;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .header-img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Stack header content in a column for small screens */
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Hide the right-side image in the header */
+    .header-img.right {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    /* Stack the pizza gallery items in a column */
+    .pizza-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
